@@ -25,7 +25,7 @@ setup(
     long_description = read('README.rst'),
     license = 'MIT',
 
-    keywords = ['bigcommerce', 'api', 'v2', 'client'],
+    keywords = ['bigcommerce', 'api', 'v3', 'client'],
     classifiers = [
         'Development Status :: 4 - Beta',
         'Topic :: Software Development :: Libraries :: Python Modules',
