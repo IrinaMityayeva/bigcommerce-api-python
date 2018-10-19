@@ -1,5 +1,5 @@
 import unittest
-from bigcommerce.resources import Mapping, Orders, ApiResource, OrderShipments, Products, CountryStates,\
+from bigcommerce_v3.resources import Mapping, Orders, ApiResource, OrderShipments, Products, CountryStates,\
                                   OrderCoupons, Webhooks, GoogleProductSearchMappings
 from mock import MagicMock
 

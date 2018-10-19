@@ -16,7 +16,7 @@ import json  # only used for urlencode querystr
 import logging
 import requests
 
-from bigcommerce.exception import *
+from bigcommerce_v3.exception import *
 
 log = logging.getLogger("bigcommerce.connection")
 

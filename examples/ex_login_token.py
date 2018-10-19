@@ -1,13 +1,13 @@
 from __future__ import print_function
-import bigcommerce.api
-import bigcommerce.customer_login_token
+import bigcommerce_v3.api
+import bigcommerce_v3.customer_login_token
 import os
 
 # Customer login tokens must be signed with an app secret loaded in the environment
 os.environ['APP_CLIENT_SECRET'] = 'client secret'
 
 # Create API object using OAuth credentials
-api = bigcommerce.api.BigcommerceApi(client_id='id', store_hash='hash', access_token='token')
+api = bigcommerce_v3.api.BigcommerceApi(client_id='id', store_hash='hash', access_token='token')
 
 # Create a new customer
 api.Customers.create(first_name='Bob', last_name='Johnson', email='bob.johnson@example.com')
@@ -16,7 +16,7 @@ api.Customers.create(first_name='Bob', last_name='Johnson', email='bob.johnson@e
 customer = api.Customers.all(email='bob.johnson@example.com')[0]
 
 # Create the JWT login token
-login_token = bigcommerce.customer_login_token.create(api, customer.id)
+login_token = bigcommerce_v3.customer_login_token.create(api, customer.id)
 
 print('Token: %s' % login_token)
 
@@ -25,5 +25,5 @@ print('%s/login/token/%s' % ('https://domain.com', login_token))
 
 # Or use the helper method to build the URL. This uses 1 API request to get the secure domain for the store, 
 # and another API request if you opt to use BC's clock for the iat.
-login_token_url = bigcommerce.customer_login_token.create_url(api, customer.id, use_bc_time=True)
+login_token_url = bigcommerce_v3.customer_login_token.create_url(api, customer.id, use_bc_time=True)
 print('Token URL: %s' % login_token_url)

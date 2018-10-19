@@ -1,7 +1,7 @@
 import os
 import sys
-from bigcommerce import connection
-from bigcommerce.resources import *  # Needed for ApiResourceWrapper dynamic loading
+from bigcommerce_v3 import connection
+from bigcommerce_v3.resources import *  # Needed for ApiResourceWrapper dynamic loading
 
 
 class BigcommerceApi(object):

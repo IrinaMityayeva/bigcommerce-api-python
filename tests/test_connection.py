@@ -1,7 +1,7 @@
 import json
 import unittest
-from bigcommerce.connection import Connection, OAuthConnection
-from bigcommerce.exception import ServerException, ClientRequestException, RedirectionException
+from bigcommerce_v3.connection import Connection, OAuthConnection
+from bigcommerce_v3.exception import ServerException, ClientRequestException, RedirectionException
 from mock import patch, MagicMock
 
 
